@@ -1,19 +1,85 @@
 <html>
-
 <head>
-  <title>dropemoff RADIO</title>
-  <link rel="stylesheet" href="style.css">
+<title>dropemoff RADIO</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <section class="header">
-    <video autoplay loop class="vidback" plays-inline>
+<script type="text/text/javascript">
+function disableF5(e) { if ((e.which || e.keyCode) == 116) e.preventDefault(); };
+$(document).on("keydown", disableF5);
+</script>
 
-      <source src="backvid.mp4" type="video.mp4">
-    </video>
-  </section>
+<section class="header">
+  <video autoplay loop class="vidback" muted plays-inline>
+  <source src="video.mp4" type="video/mp4">
+  </video>
+  <audio id="audio" preload="" autoplay="" loop="">
+  <source type="audio/mp3" src="music.mp3">
+  </audio>
+  <script type="text/javascript">
+    var audio = document.getElementById("audio");
+    audio.volume = .01
+    audio.play()
+  </script>
+
+
+  </audio>
+
+
+  <div class="center">
+<center>
+
+  <p class="txt anim-text-flow" align="middle" style="font-size: 45" href="s">condone.live</p>
+  <a id="clockDisplay" class="clockStyle" class="txt anim-text-flow" align="middle" style="font-size: 25">"00:00:00 AM" <br></a>
+  <a class="txt anim-text-flow" align="middle" style="font-size: 25"><br></a>
+  <a class="txt anim-text-flow" align="bottom" style="font-size: 25"><br></a>
+
+
+  <div style="letter-spacing: 2;font-size: 13;">
+            <div class="animated fadeInDown">
+            </div>
+
+            <div class="animated fadeInUp">
+
+
+
+		<script>
+			function renderTime() {
+			var currentTime = new Date();
+			var diem = "AM";
+			var h = currentTime.getHours();
+			var m = currentTime.getMinutes();
+			var s = currentTime.getSeconds();
+			setTimeout('renderTime()',1000);
+			if (h == 0) {
+				h = 12;
+			} else if (h > 12) {
+				h = h - 12;
+				diem="PM";
+			}
+			if (h < 10) {
+				h = "0" + h;
+			}
+			if (m < 10) {
+				m = "0" + m;
+			}
+			if (s < 10) {
+				s = "0" + s;
+			}
+			var myClock = document.getElementById('clockDisplay');
+			myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+			myClock.innerText = h + ":" + m + ":" + s + " " + diem;
+			}
+			renderTime();
+		</script>
+				</div>
+			</div>
+
+</center>
+</div>
+
+</section>
 
 </body>
-
 </html>

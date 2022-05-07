@@ -5,5 +5,82 @@
 }
 .header
 {
+  background: rgba(0,0,0,0.4);
   height: 100vh;
+}
+.vidback
+{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+.welcome-msg
+{
+  position: absolute;
+  text-align: center;
+  font-family: monospace;
+  color: #fff;
+  top: 300px;
+}
+.welcome-msg h1
+{
+  font-size: 80px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+}
+
+.center {
+font-family: 'Montserrat', sans-serif;
+color: #fff;
+text-shadow: 1px 1px 2px black;
+
+
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+      animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
+    -o-animation: fadein 3s; /* Opera */
+}ÃƒÂ¢&#128;&#139;
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
